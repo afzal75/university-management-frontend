@@ -1,14 +1,18 @@
 "use client";
 
-import { Menu, Layout } from "antd";
 import { useState } from "react";
+import { Layout, Menu } from "antd";
+
 import { sidebarItems } from "@/constants/sidebarItems";
 import { USER_ROLE } from "@/constants/role";
 
 const { Sider } = Layout;
-const Sidebar = () => {
+
+const SideBar = () => {
   const [collapsed, setCollapsed] = useState(false);
-    const role = USER_ROLE.SUPER_ADMIN
+
+  const role = USER_ROLE.ADMIN;
+
   return (
     <Sider
       collapsible
@@ -45,4 +49,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SideBar;
